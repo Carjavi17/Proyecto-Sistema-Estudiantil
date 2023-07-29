@@ -1,0 +1,17 @@
+[
+  {
+    "FullName": "Victor Cordero",
+    "DNITeacher": 95674853,
+    "Specialty": "Licenciado en Informatica"
+  },
+  {
+    "FullName": "Arien Reynoso",
+    "DNITeacher": 16456375,
+    "Specialty": "Analista de Sistema"
+  },
+  {
+    "FullName": "Daniel Poli",
+    "DNITeacher": 14563456,
+    "Specialty": "Musico"
+  }
+]

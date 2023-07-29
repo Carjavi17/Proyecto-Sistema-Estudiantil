@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Frm_Admin_Asignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_DeleteAsignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_DeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_DeleteTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_EditTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Admin_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_LaCulebrita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Login_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Login_PasswordEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Student_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_LaVieja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

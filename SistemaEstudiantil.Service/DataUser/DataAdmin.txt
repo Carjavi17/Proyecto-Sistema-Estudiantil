@@ -1,0 +1,8 @@
+Administrator,Carlos Guerra,carlos,123,carlosjguerrab@gmail.com,carlos.jpg
+Student,Mizael Medina,mizael,123,mmedian@iiconcepcion.edu.ar,mizael.jpg
+Student,Adrian Franco,adrian,123,adrojas@iiconcepcion.edu.art,adrian.jpg
+Student,Milton Medina,milton,123,mgamarra@iiconcepcion.edu.ar,milton.jpg
+Student,Alejandro Fernandez,alejandro,123,mgamarra@iiconcepcion.edu.ar,Icono_student.PNG
+Teacher,Victor Cordero,victor,123,cb@gmail.com,victor.jpg
+Teacher,Ariel Reynoso,ariel,123,cb@gmail.com,ariel.jpg
+Teacher,Daniel Poli,daniel,123,cb@gmail.com,daniel.jpg

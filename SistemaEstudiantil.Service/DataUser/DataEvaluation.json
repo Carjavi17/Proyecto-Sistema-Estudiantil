@@ -1,0 +1,58 @@
+[
+  {
+    "Student": {
+      "DNIStudent": 23456098,
+      "FullName": "Adrian Franco"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Victor Cordero",
+      "CodeAsignature": 2,
+      "NameAsignature": "Programacion 3"
+    },
+    "FirstEvaluation": 10,
+    "SecondEvaluation": 5,
+    "FinalEvaluation": 7
+  },
+  {
+    "Student": {
+      "DNIStudent": 28657345,
+      "FullName": "Milton Medina"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Victor Cordero",
+      "CodeAsignature": 2,
+      "NameAsignature": "Programacion 3"
+    },
+    "FirstEvaluation": 10,
+    "SecondEvaluation": 10,
+    "FinalEvaluation": 10
+  },
+  {
+    "Student": {
+      "DNIStudent": 23465754,
+      "FullName": "Alejandro Fernandez"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Victor Cordero",
+      "CodeAsignature": 2,
+      "NameAsignature": "Programacion 3"
+    },
+    "FirstEvaluation": 10,
+    "SecondEvaluation": 10,
+    "FinalEvaluation": 10
+  },
+  {
+    "Student": {
+      "DNIStudent": 24567876,
+      "FullName": "Mizael Medina"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Daniel Poli",
+      "CodeAsignature": 1,
+      "NameAsignature": "Fund. de la Fe y Deontol."
+    },
+    "FirstEvaluation": 5,
+    "SecondEvaluation": 5,
+    "FinalEvaluation": 5
+  }
+]

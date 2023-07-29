@@ -1,0 +1,17 @@
+[
+  {
+    "FullNameTeacher": "Victor Cordero",
+    "CodeAsignature": 2,
+    "NameAsignature": "Programacion 3"
+  },
+  {
+    "FullNameTeacher": "Ariel Reynoso",
+    "CodeAsignature": 4,
+    "NameAsignature": "Redes y Sistemas Operativos"
+  },
+  {
+    "FullNameTeacher": "Daniel Poli",
+    "CodeAsignature": 1,
+    "NameAsignature": "Fund. de la Fe y Deontol."
+  }
+]
