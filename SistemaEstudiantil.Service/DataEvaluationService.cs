@@ -13,56 +13,49 @@ namespace SistemaEstudiantil.Service
     {
         public Evaluation AddEvaluation(string fullname, int Dni, int codeAsignature,string nameAsignature, int firstEvaluation, int secondEvaluation, int finalEvaluation,string fullNameTeacher)
         {
+            // Inicializa la variable 'evaluation' con valor nulo.
             Evaluation evaluation = null;
+            // Convierte el JSON almacenado en una lista de objetos Evaluation.
             List<Evaluation> evaluations = ConvertJson();
 
+            // Verifica que 'fullname' y 'nameAsignature' no sean nulos.
             if (fullname != null && nameAsignature != null)
             {
+                // Verifica si ya existe una evaluación para el estudiante ('fullname') y la asignatura ('nameAsignature').
                 bool isDuplicate = evaluations.Any(e => e.Student.FullName == fullname && e.Asignature.NameAsignature == nameAsignature);
+                // Si ya existe una evaluación duplicada, se retorna 'null'.
                 if (isDuplicate)
                 {
                     return null;
                 }
-
+                // Crea un nuevo objeto 'Student' con los datos proporcionados.
                 Student student = new Student(Dni, fullname);
+                // Crea un nuevo objeto 'Asignature' con los datos proporcionados.
                 Asignature asignature = new Asignature(fullNameTeacher,codeAsignature, nameAsignature);
-
+                // Crea un nuevo objeto 'Evaluation' con los datos proporcionados.
                 Evaluation evaluation1 = new Evaluation(student, asignature, firstEvaluation, secondEvaluation, finalEvaluation);
                 evaluations.Add(evaluation1);
-
+                // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
                 string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json";
+                // Convierte la lista actualizada a JSON con formato legible y lo guarda en el archivo especificado.
                 string json = JsonSerializer.Serialize(evaluations, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
+                // Asigna el objeto 'evaluation1' a la variable 'evaluation' para devolverlo como resultado de la operación.
                 evaluation = evaluation1;
             }
-
+            // Retorna la evaluación creada como resultado de la operación o 'null' si no se pudo agregar debido a un duplicado.
             return evaluation;
         }
 
         public List<Evaluation> ConvertJson()
         {
-            try
-            {
-                string json = File.ReadAllText(@"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json");
+            // Lee el contenido del archivo JSON y lo almacena en una variable llamada 'json'.
+            string json = File.ReadAllText(@"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json");
+            // Deserializa el contenido JSON en una lista de objetos Evaluation usando el método 'JsonSerializer.Deserialize()'.
+            List<Evaluation> evaluations = JsonSerializer.Deserialize<List<Evaluation>>(json);
+            // Retorna la lista de objetos Evaluation obtenida del JSON.
+            return evaluations;
 
-                List<Evaluation> evaluations = JsonSerializer.Deserialize<List<Evaluation>>(json);
-
-                return evaluations;
-            }
-            catch (FileNotFoundException ex)
-            {
-                Console.WriteLine("Error: Archivo JSON no encontrado: " + ex.Message);
-            }
-            catch (JsonException ex)
-            {
-                Console.WriteLine("Error al deserializar el archivo JSON: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error general al convertir JSON: " + ex.Message);
-            }
-
-            return null;
         }
 
     }

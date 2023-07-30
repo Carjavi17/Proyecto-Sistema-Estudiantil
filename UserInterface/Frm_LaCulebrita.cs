@@ -14,27 +14,31 @@ namespace UserInterface
     public partial class Frm_LaCulebrita : Form
 
     {
+        // Lista que almacena los segmentos del cuerpo de la serpiente
         private List<Circle> Snake = new List<Circle>();
+        // Objeto que representa la comida para la serpiente
         private Circle food = new Circle();
-
+        // Variables para el ancho y alto máximo del área de juego
         int maxWidth;
         int maxHeight;
-
+        // Variables para el puntaje actual y el puntaje máximo (high score)
         int score;
         int highScore;
-
+        // Objeto Random para generar posiciones aleatorias para la comida
         Random rand = new Random();
-
+        // Variables para controlar las direcciones de movimiento de la serpiente
         bool goLeft, goRight, goDown, goUp;
 
+        // Constructor del formulario
         public Frm_LaCulebrita()
         {
             InitializeComponent();
-            new Setting();
+            new Setting(); // Crea una nueva instancia de la clase Setting
         }
-
+        // Evento que se activa cuando se presiona una tecla
         private void KeyisDown(object sender, KeyEventArgs e)
         {
+            // Asigna las direcciones de movimiento de la serpiente según la tecla presionada
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -52,8 +56,10 @@ namespace UserInterface
             }
         }
 
+        // Evento que se activa cuando se suelta una tecla
         private void KeyisUP(object sender, KeyEventArgs e)
         {
+            // Desactiva las direcciones de movimiento de la serpiente cuando se suelta la tecla
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -70,12 +76,12 @@ namespace UserInterface
                     break;
             }
         }
-
+        // Evento Click del botón Iniciar Juego
         private void IniciarJuego(object sender, EventArgs e)
         {
-            RestartGame();
+            RestartGame();// Reinicia el juego
         }
-
+        // Evento del temporizador que controla el movimiento de la serpiente
         private void GameTimerEvent(object sender, EventArgs e)
         {
             if (goLeft)
@@ -94,7 +100,7 @@ namespace UserInterface
             {
                 Setting.directions = "up";
             }
-
+            // Lógica del movimiento de la serpiente y detección de colisiones
 
             for (int i = Snake.Count - 1; i >= 0; i--)
             {
@@ -157,13 +163,14 @@ namespace UserInterface
                 }
             }
 
-
+            // Vuelve a dibujar el área de juego
             pictureBox1.Invalidate();
 
         }
-
+        // Evento Paint del PictureBox donde se dibuja el juego
         private void UpdatePictureBox(object sender, PaintEventArgs e)
         {
+            // Lógica para dibujar el juego en el PictureBox
             Graphics canvas = e.Graphics;
 
             Brush snakeColour;
@@ -196,9 +203,10 @@ namespace UserInterface
             ));
 
         }
-
+        // Método para reiniciar el juego
         private void RestartGame()
         {
+            // Lógica para reiniciar el juego (posiciones iniciales, puntajes, etc.)
             maxWidth = pictureBox1.Width / Setting.Width - 1;
             maxHeight = pictureBox1.Height / Setting.Height - 1;
 
@@ -221,9 +229,10 @@ namespace UserInterface
 
             timer1.Start();
         }
-
+        // Método para gestionar la acción cuando la serpiente come la comida
         private void EatFood()
         {
+            // Lógica para aumentar el puntaje y generar una nueva posición para la comida
             score += 1;
 
             label1.Text = "Score: " + score;
@@ -239,9 +248,10 @@ namespace UserInterface
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
         }
 
-
+        // Método para gestionar el final del juego (Game Over)
         private void GameOver()
         {
+            // Lógica para detener el juego, actualizar el puntaje máximo y mostrar mensaje de Game Over
             timer1.Stop();
             button1.Enabled = true;
 
