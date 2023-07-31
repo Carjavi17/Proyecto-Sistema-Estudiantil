@@ -114,6 +114,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Admin_Student";
             Text = "Crear Estudiante";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

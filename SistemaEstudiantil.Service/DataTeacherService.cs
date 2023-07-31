@@ -12,6 +12,7 @@ namespace SistemaEstudiantil.Service
 {
     public class DataTeacherService
     {
+        string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataTeacher.json";
         public Teacher AddTeacher(int Dni, string fullName, string specialty)
         {
             List<Teacher> teachers = new List<Teacher>();
@@ -24,7 +25,6 @@ namespace SistemaEstudiantil.Service
                 Teacher teacher = new Teacher(Dni, fullName, specialty);
                 teachers.Add(teacher);
 
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataTeacher.json";
                 string json = JsonSerializer.Serialize(teachers, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
 
@@ -54,7 +54,6 @@ namespace SistemaEstudiantil.Service
                     teacherToUpdate.Specialty = specialty;
                 }
 
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataTeacher.json";
                 string json = JsonSerializer.Serialize(teachers, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
 
@@ -74,7 +73,6 @@ namespace SistemaEstudiantil.Service
             {
                 teachers.Remove(teacherToRemove);
 
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataTeacher.json";
                 string json = JsonSerializer.Serialize(teachers, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
 
@@ -86,7 +84,7 @@ namespace SistemaEstudiantil.Service
 
         public List<Teacher> ConvertJson()
         {
-            string json = File.ReadAllText(@"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataTeacher.json");
+            string json = File.ReadAllText(rutaArchivo);
 
             List<Teacher> teachers = JsonSerializer.Deserialize<List<Teacher>>(json);
 

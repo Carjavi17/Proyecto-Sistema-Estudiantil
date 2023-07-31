@@ -84,8 +84,8 @@ namespace UserInterface
                 MessageBox.Show("Debe seleccionar un campo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            MessageBoxButtons boton = MessageBoxButtons.OKCancel;           
-            DialogResult dialogResult = MessageBox.Show("Seguro que desea cargar las siguientes evaluaciones:\r\n" + "Evaluacion 1: " + numericUpDown1.Value +" Evaluacion 2: " + numericUpDown2.Value +" Evaluacion 3: " + numericUpDown3.Value,"Evaluaciones",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+            MessageBoxButtons boton = MessageBoxButtons.OKCancel;
+            DialogResult dialogResult = MessageBox.Show("Seguro que desea cargar las siguientes evaluaciones:\r\n" + "Evaluacion 1: " + numericUpDown1.Value + " Evaluacion 2: " + numericUpDown2.Value + " Evaluacion 3: " + numericUpDown3.Value, "Evaluaciones", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.OK)
             {
                 load = dialogResult == DialogResult.OK;

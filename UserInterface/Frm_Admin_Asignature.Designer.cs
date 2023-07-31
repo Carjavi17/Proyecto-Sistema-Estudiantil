@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Admin_Asignature));
             pictureBox1 = new PictureBox();
             labelCodeAsig = new Label();
             labelNameAsig = new Label();
@@ -148,6 +149,7 @@
             Controls.Add(labelNameAsig);
             Controls.Add(labelCodeAsig);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Admin_Asignature";
             Text = "Crear Asignatura";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

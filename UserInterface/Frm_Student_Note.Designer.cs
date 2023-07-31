@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Student_Note));
             pictureBox1 = new PictureBox();
             listView1 = new ListView();
             label1 = new Label();
@@ -78,6 +79,7 @@
             Controls.Add(label1);
             Controls.Add(listView1);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Student_Note";
             Text = "Resumen Academico";
             Load += Frm_Student_Note_Load;

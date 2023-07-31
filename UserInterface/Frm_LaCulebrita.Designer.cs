@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_LaCulebrita));
             button1 = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -100,6 +101,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_LaCulebrita";
             Text = "La Culebrita";
             KeyDown += KeyisDown;

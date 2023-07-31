@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login_ChangePassword));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -127,6 +128,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Login_ChangePassword";
             Text = "Frm_Login_ChangePassword";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

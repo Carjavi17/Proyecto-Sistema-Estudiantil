@@ -34,6 +34,7 @@
             menuStrip1 = new MenuStrip();
             createAsignatureToolStripMenuItem = new ToolStripMenuItem();
             newAsignatureToolStripMenuItem = new ToolStripMenuItem();
+            borrarAsignaturaToolStripMenuItem = new ToolStripMenuItem();
             createTeacherToolStripMenuItem = new ToolStripMenuItem();
             newTeacherToolStripMenuItem = new ToolStripMenuItem();
             borrarProfesorToolStripMenuItem = new ToolStripMenuItem();
@@ -48,7 +49,6 @@
             toolStripButton2 = new ToolStripButton();
             toolStripButton3 = new ToolStripButton();
             pictureBox3 = new PictureBox();
-            borrarAsignaturaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -102,9 +102,16 @@
             // newAsignatureToolStripMenuItem
             // 
             newAsignatureToolStripMenuItem.Name = "newAsignatureToolStripMenuItem";
-            newAsignatureToolStripMenuItem.Size = new Size(180, 22);
+            newAsignatureToolStripMenuItem.Size = new Size(172, 22);
             newAsignatureToolStripMenuItem.Text = "Nueva Asignatura";
             newAsignatureToolStripMenuItem.Click += newAsignatureToolStripMenuItem_Click;
+            // 
+            // borrarAsignaturaToolStripMenuItem
+            // 
+            borrarAsignaturaToolStripMenuItem.Name = "borrarAsignaturaToolStripMenuItem";
+            borrarAsignaturaToolStripMenuItem.Size = new Size(172, 22);
+            borrarAsignaturaToolStripMenuItem.Text = "Borrar Asignatura";
+            borrarAsignaturaToolStripMenuItem.Click += borrarAsignaturaToolStripMenuItem_Click;
             // 
             // createTeacherToolStripMenuItem
             // 
@@ -233,13 +240,6 @@
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
-            // borrarAsignaturaToolStripMenuItem
-            // 
-            borrarAsignaturaToolStripMenuItem.Name = "borrarAsignaturaToolStripMenuItem";
-            borrarAsignaturaToolStripMenuItem.Size = new Size(180, 22);
-            borrarAsignaturaToolStripMenuItem.Text = "Borrar Asignatura";
-            borrarAsignaturaToolStripMenuItem.Click += borrarAsignaturaToolStripMenuItem_Click;
-            // 
             // Frm_Administrator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,6 +256,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             ForeColor = Color.Transparent;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Frm_Administrator";
             Text = "Panel de Administrador";

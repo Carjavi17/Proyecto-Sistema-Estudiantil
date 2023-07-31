@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login_PasswordEmail));
             label1 = new Label();
             textBox1 = new TextBox();
             button1 = new Button();
@@ -87,6 +88,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Login_PasswordEmail";
             Text = "Envio de Contraseña";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

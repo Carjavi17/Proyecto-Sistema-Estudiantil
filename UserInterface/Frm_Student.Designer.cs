@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Student));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             menuStrip1 = new MenuStrip();
@@ -130,6 +131,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Frm_Student";
             Text = "Panel de Estudiante";

@@ -13,6 +13,8 @@ namespace SistemaEstudiantil.Service
 {
     public class DataAsignatureService
     {
+        // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
+        string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAsignature.json";
         public Asignature AddAsignature(string fullNameTeacher, int codeAsignature, string nameAsignature)
         {
             // Convierte el JSON almacenado en una lista de objetos Asignature.
@@ -27,8 +29,6 @@ namespace SistemaEstudiantil.Service
                 Asignature asignature = new Asignature(fullNameTeacher, codeAsignature, nameAsignature);
                 asignatures.Add(asignature); // Agrega la nueva asignatura a la lista existente.
 
-                // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAsignature.json";
                 // Convierte la lista actualizada a JSON con formato legible y lo guarda en el archivo especificado.
                 string json = JsonSerializer.Serialize(asignatures, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
@@ -54,8 +54,6 @@ namespace SistemaEstudiantil.Service
                 // Si se encontró la asignatura, se procede a eliminarla de la lista.
                 asignatures.Remove(asignatureToRemove);
 
-                // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAsignature.json";
                 // Convierte la lista actualizada a JSON con formato legible y lo guarda en el archivo especificado.
                 string json = JsonSerializer.Serialize(asignatures, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
@@ -68,7 +66,7 @@ namespace SistemaEstudiantil.Service
         public List<Asignature> ConvertJson()
         {
             // Lee el contenido del archivo JSON y lo almacena en una variable llamada 'json'.
-            string json = File.ReadAllText(@"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAsignature.json");
+            string json = File.ReadAllText(rutaArchivo);
 
             // Deserializa el contenido JSON en una lista de objetos Asignature usando el método 'JsonSerializer.Deserialize()'.
             List<Asignature> asignatures = JsonSerializer.Deserialize<List<Asignature>>(json);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Admin_Teacher));
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -135,6 +136,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Admin_Teacher";
             Text = "Crear Profesor";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

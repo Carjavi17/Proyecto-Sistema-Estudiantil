@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Teacher));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             comboBox1 = new ComboBox();
@@ -310,6 +311,7 @@
             Controls.Add(comboBox1);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Teacher";
             Text = "Panel de Profesor";
             Load += Frm_Teacher_Load;

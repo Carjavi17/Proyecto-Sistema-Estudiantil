@@ -11,6 +11,8 @@ namespace SistemaEstudiantil.Service
 {
     public class DataEvaluationService
     {
+        // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
+        string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json";
         public Evaluation AddEvaluation(string fullname, int Dni, int codeAsignature,string nameAsignature, int firstEvaluation, int secondEvaluation, int finalEvaluation,string fullNameTeacher)
         {
             // Inicializa la variable 'evaluation' con valor nulo.
@@ -35,8 +37,7 @@ namespace SistemaEstudiantil.Service
                 // Crea un nuevo objeto 'Evaluation' con los datos proporcionados.
                 Evaluation evaluation1 = new Evaluation(student, asignature, firstEvaluation, secondEvaluation, finalEvaluation);
                 evaluations.Add(evaluation1);
-                // Especifica la ruta del archivo JSON donde se almacenarán los datos actualizados.
-                string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json";
+
                 // Convierte la lista actualizada a JSON con formato legible y lo guarda en el archivo especificado.
                 string json = JsonSerializer.Serialize(evaluations, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(rutaArchivo, json);
@@ -50,7 +51,7 @@ namespace SistemaEstudiantil.Service
         public List<Evaluation> ConvertJson()
         {
             // Lee el contenido del archivo JSON y lo almacena en una variable llamada 'json'.
-            string json = File.ReadAllText(@"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataEvaluation.json");
+            string json = File.ReadAllText(rutaArchivo);
             // Deserializa el contenido JSON en una lista de objetos Evaluation usando el método 'JsonSerializer.Deserialize()'.
             List<Evaluation> evaluations = JsonSerializer.Deserialize<List<Evaluation>>(json);
             // Retorna la lista de objetos Evaluation obtenida del JSON.

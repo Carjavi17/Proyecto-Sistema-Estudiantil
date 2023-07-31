@@ -140,6 +140,7 @@
             Controls.Add(label8);
             Controls.Add(label5);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_Admin_EditStudent";
             Text = "Editar Estudiante";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

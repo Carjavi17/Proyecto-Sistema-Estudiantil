@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_LaVieja));
             menuStrip1 = new MenuStrip();
             juegoToolStripMenuItem = new ToolStripMenuItem();
             iniciarToolStripMenuItem = new ToolStripMenuItem();
@@ -81,7 +82,7 @@
             // iniciarToolStripMenuItem
             // 
             iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            iniciarToolStripMenuItem.Size = new Size(180, 22);
+            iniciarToolStripMenuItem.Size = new Size(122, 22);
             iniciarToolStripMenuItem.Text = "Iniciar";
             iniciarToolStripMenuItem.Click += iniciarToolStripMenuItem_Click;
             // 
@@ -90,14 +91,14 @@
             resetToolStripMenuItem.Checked = true;
             resetToolStripMenuItem.CheckState = CheckState.Checked;
             resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            resetToolStripMenuItem.Size = new Size(180, 22);
+            resetToolStripMenuItem.Size = new Size(122, 22);
             resetToolStripMenuItem.Text = "Reiniciar";
             resetToolStripMenuItem.Click += resetToolStripMenuItem_Click_1;
             // 
             // salirToolStripMenuItem1
             // 
             salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            salirToolStripMenuItem1.Size = new Size(180, 22);
+            salirToolStripMenuItem1.Size = new Size(122, 22);
             salirToolStripMenuItem1.Text = "Salir";
             salirToolStripMenuItem1.Click += salirToolStripMenuItem1_Click;
             // 
@@ -340,6 +341,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Frm_LaVieja";
             Text = "La Vieja";

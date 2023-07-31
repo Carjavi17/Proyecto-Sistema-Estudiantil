@@ -6,13 +6,12 @@ namespace SistemaEstudiantil.Service
 {
     public class SecurityService
     {
+        string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAdmin.txt";
         public Usuario Login(string use, string pas)
         {
             List<Usuario> usuarios = new List<Usuario>();
 
-            Usuario userFound = null;
-
-            string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAdmin.txt";
+            Usuario userFound = null;            
 
             try
             {
@@ -68,8 +67,6 @@ namespace SistemaEstudiantil.Service
 
             Usuario userFound = null;
 
-            string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAdmin.txt";
-
             try
             {
                 using (StreamReader archivo1 = new StreamReader(rutaArchivo))
@@ -124,7 +121,6 @@ namespace SistemaEstudiantil.Service
 
             Usuario userFound = null;
 
-            string rutaArchivo = @"C:\Users\carlos\source\repos\Proyecto\SistemaEstudiantil.Service\DataUser\DataAdmin.txt";
             try
             {
                 using (StreamReader archivo1 = new StreamReader(rutaArchivo))
