@@ -13,5 +13,10 @@
     "FullName": "Daniel Poli",
     "DNITeacher": 14563456,
     "Specialty": "Musico"
+  },
+  {
+    "FullName": "Carlos Gorosito",
+    "DNITeacher": 95680333,
+    "Specialty": "Taller de Programacion"
   }
 ]

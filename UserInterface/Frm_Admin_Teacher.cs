@@ -39,7 +39,7 @@ namespace UserInterface
             }
 
             MessageBoxButtons boton = MessageBoxButtons.OKCancel;
-            DialogResult dialogResult = MessageBox.Show("Seguro que desea eliminar los siguientes datos:\r\n" + "DNI: " + textbDNI.Value + " Nombre: " + tbFullName.Text, "Profesores", boton, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Seguro que desea crear al profesor con los siguientes datos:\r\n" + "DNI: " + textbDNI.Value + " Nombre: " + tbFullName.Text, "Profesores", boton, MessageBoxIcon.Exclamation);
 
             if (dialogResult == DialogResult.OK)
             {

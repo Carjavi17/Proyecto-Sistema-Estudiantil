@@ -54,5 +54,33 @@
     "FirstEvaluation": 5,
     "SecondEvaluation": 5,
     "FinalEvaluation": 5
+  },
+  {
+    "Student": {
+      "DNIStudent": 24567876,
+      "FullName": "Mizael Medina"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Victor Cordero",
+      "CodeAsignature": 2,
+      "NameAsignature": "Programacion 3"
+    },
+    "FirstEvaluation": 10,
+    "SecondEvaluation": 10,
+    "FinalEvaluation": 9
+  },
+  {
+    "Student": {
+      "DNIStudent": 95924110,
+      "FullName": "Alejandro Pe\u00F1a"
+    },
+    "Asignature": {
+      "FullNameTeacher": "Ariel Reynoso",
+      "CodeAsignature": 4,
+      "NameAsignature": "Redes y Sistemas Operativos"
+    },
+    "FirstEvaluation": 7,
+    "SecondEvaluation": 5,
+    "FinalEvaluation": 8
   }
 ]
